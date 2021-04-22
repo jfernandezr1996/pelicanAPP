@@ -258,14 +258,19 @@ def main():
                                     height: 80px;
                                     }
                                 </style>""", unsafe_allow_html=True)
+                    #st.markdown(
+                    #    f"""
+                    #    <div class="container">
+                    #    <p class="logo-text">Similarity Tool &nbsp</p>
+                    #    <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(team_img, "rb").read()).decode()}">
+                    #    </div>
+                    #    """,
+                    #    unsafe_allow_html=True)
                     st.markdown(
                         f"""
-                        <div class="container">
-                        <p class="logo-text">Similarity Tool &nbsp</p>
-                        <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(team_img, "rb").read()).decode()}">
-                        </div>
-                        """,
-                        unsafe_allow_html=True)
+                        <font style="Roboro" size="6" weight="bold"> Similarity Tool &nbsp</font>
+                        <img width="80" src="data:image/png;base64,{base64.b64encode(open(team_img, "rb").read()).decode()}">
+                        """, unsafe_allow_html=True)
                     st.subheader(title)
                     raw_html = html_tabla._repr_html_()
                     components.html(raw_html, height=350, scrolling=True)

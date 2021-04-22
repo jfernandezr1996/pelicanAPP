@@ -238,7 +238,7 @@ def main():
                 else:
                     title = 'Finding Similar Teams'
                     
-                c1, c2 = st.beta_columns((1.25,1))
+                c1, c2 = st.beta_columns((1,1.5))
                 with c1:
                     team_img = 'teams/'+team_similar+".png"
                     st.markdown("""

@@ -58,7 +58,7 @@ def color_info_2(s):
 
 def radarchart_pyplot(
         data, data_filter, teams, cols, ranges_cols, 
-        percentile, average): 
+        percentile, average,size): 
     
     from functions_radarchart import ComplexRadar
     
@@ -118,9 +118,14 @@ def radarchart_pyplot(
                     lambda x: limits(x, ranges_cols, c))
             teams_radar = teams + ['Average ' + comp_name]
             
-    fig, ax = plt.subplots(figsize=(6,6)) 
+    fig, ax = plt.subplots(figsize=size) 
     ax.axis('off')
-    radar = ComplexRadar(fig, tuple(cols), ranges_cols_selected)
+    font_variables = 10 if size == (6,6) else 8
+    font_text = 7 if size == (6,6) else 5
+    font_legend = 'medium' if size == (6,6) else 'small'
+    radar = ComplexRadar(
+        fig, tuple(cols), ranges_cols_selected, 
+        font_variables, font_text, font_legend)
     for t, color in zip(teams_radar, colors_teams):
         df_teams_t = list(
             df_plot[df_plot.Squad == t].\
@@ -135,14 +140,16 @@ def radarchart_pyplot(
             title_plot = title_plot[:-1] + '\n'
     title_plot = title_plot[1:-2] + '\n<' + comp_name + '>'
     
+    fontsize_subtitle = 14 if size == (6,6) else 10
     highlight_textprops = [{'color': c , 'weight': 'bold'} 
                            for c in colors_teams[:len(teams)]] + \
-        [{'color': '#303A5D', 'fontsize': 14, 'weight': 'regular'}]
+        [{'color': '#303A5D', 'fontsize': fontsize_subtitle,
+          'weight': 'regular'}]
     y_value = 1.3 if len(teams) < 4 else 1.4
     HighlightText(
         s = title_plot, 
         x = .55, y = y_value,
-        fontsize = 18, 
+        fontsize = 18 if size == (6,6) else 13, 
         fontname = 'Roboto',
         color = '#303A5D', 
         highlight_textprops=highlight_textprops,

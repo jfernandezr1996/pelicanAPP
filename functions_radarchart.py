@@ -4,7 +4,8 @@ import matplotlib as mpl
 
 class ComplexRadar():
     
-    def __init__(self, fig, variables, ranges,
+    def __init__(self, fig, variables, ranges, fontsize_labels,
+                 fontsize_text, fontsize_legend,
                  n_ordinate_levels=6):
         mpl.style.use('seaborn')
         angles = np.arange(0, 360, 360./len(variables))
@@ -18,6 +19,8 @@ class ComplexRadar():
         for label, angle in zip(labels, angles):
             x,y = label.get_position()
             lab = axes[0].text(x,y, label.get_text(), 
+                               fontdict = {'fontsize': fontsize_labels, 
+                                           'fontfamily': 'Roboto'},
                                transform=label.get_transform(),
                                ha=label.get_ha(), va=label.get_va())
             if (angle <= 180):
@@ -39,11 +42,14 @@ class ComplexRadar():
             gridlabel[0] = ""
             gridlabel[-1] = ""
             ax.set_rgrids(grid, labels=gridlabel, 
-                          angle=angles[i], fontsize=7)
+                          angle=angles[i], 
+                          fontsize=fontsize_text,
+                          fontfamily='Roboto')
             ax.set_ylim(*ranges[i])
         self.angle = np.deg2rad(np.r_[angles, angles[0]])
         self.ranges = ranges
         self.ax = axes[0]
+        self.fontsize_legend = fontsize_legend
         
     def preprocess_data(self, data):
         for d, (y1, y2) in zip(data[1:], self.ranges[1:]):
@@ -58,8 +64,9 @@ class ComplexRadar():
     def plot(self, data, *args, **kw):
         sdata = self.preprocess_data(data)
         self.ax.plot(self.angle, np.r_[sdata, sdata[0]], *args, **kw)
-        self.ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05),
-                       fancybox=True, shadow=True, ncol=5)
+        self.ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.07),
+                       fancybox=True, shadow=True, ncol=5, 
+                       fontsize = self.fontsize_legend)
         
     def fill(self, data, *args, **kw):
         sdata = self.preprocess_data(data)

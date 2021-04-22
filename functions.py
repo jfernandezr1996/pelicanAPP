@@ -58,7 +58,7 @@ def color_info_2(s):
 
 def radarchart_pyplot(
         data, data_filter, teams, cols, ranges_cols, 
-        percentile, average): 
+        percentile, average, size): 
     
     from functions_radarchart import ComplexRadar
     
@@ -118,7 +118,7 @@ def radarchart_pyplot(
                     lambda x: limits(x, ranges_cols, c))
             teams_radar = teams + ['Average ' + comp_name]
             
-    fig, ax = plt.subplots(figsize=(6,6)) 
+    fig, ax = plt.subplots(figsize=size) 
     ax.axis('off')
     radar = ComplexRadar(fig, tuple(cols), ranges_cols_selected)
     for t, color in zip(teams_radar, colors_teams):

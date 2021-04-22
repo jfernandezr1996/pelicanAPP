@@ -1,0 +1,57 @@
+Metric;Description
+Poss;Percentage of passes attemped
+Gls;Goals scored or allowed
+Ast;Assists
+xG;Expected Goal (include penalty kicks)
+G-xG;Goals - Expected Goals
+xA;xG which follows a pass that assists a shot
+Gls/90;Goals scored per 90 minutes
+Ast/90;Assists per 90 minutes
+xG/90;Expected Goals per 90 minutes
+xA/90;xG Assisted per 90 minutes
+GA;Goals Against
+GA/90;Goals Against per 90 minutes
+xGA/90;Expected goals allowed by team per 90 minutes
+Save%;Save percentage: (Shots on Target Against - Goals Against) / Shots on Target Against
+CS%;Porcentage of matches that result in clean sheets
+SoTA/90;Shots on Target Against per 90 minutes
+Sh;Shots Total
+Sh/90;Shots total per 90 minutes
+SoT/90;Shots on Target per 90 minutes
+SoT/G;Shots on Target per Goal
+SoTA/GA;Shots on Target Against pero Goal Against
+PassesCompleted/90;Passes Completed per match
+PassesAttempted/90;Passes Attempted per match
+Passes%;Pass Completion Percentage
+ShortPassesCompleted/90;Passes between 5 and 15 yards per match
+ShortPasses%;Pass Completion Percentage: passes of fewer than 5 yards
+MediumPasses%;Pass Completion Percentage: passes between 5 and 25 yards
+MediumPassesCompleted/90;Passes between 15 and 30 yards per match
+LongPasses%;Pass Completion Percentage: passes longer than 25 yards
+LongPassesCompleted/90;Passes longer than 30 yards per match
+TotDistPasses/90;Total distance, in yards, that completed passes have traveled in any direction per 90 minutes
+PrgDistPasses/90;Total distance, in yards, that completed passes have traveled towards the opponent's goal
+KP/90;Key Passes. Passes that directly lead to a shot (assisted shots)
+FinalThirdPasses/90;Passes into Final Third. Completed passes that enter the 1/3 of the pitch closest to the goal
+PPA/90;Passes into Penalty Area
+CrsPA/90;Crosses into Penalty Area
+PassesProgressive/90;Progressive Passes per 90 minutes
+SCA/90;Shot-Creation Actions per 90 minutes
+GCA/90;Goal-Creation Actions per 90 minutes
+Press%;Pressure Percentage
+Tkl/90;Number of players tackled per 90 minutes
+Blocks/90;Number of times blocking the ball by standing in its path per 90 minutes
+Int/90;Interceptions per 90 minutes
+Err/90;Mistakes leading to an opponent's shot
+Touches/90;Number of times a player touched a ball per 90 minutes
+Dribbles%;Percentage of Dribbles Completed Successfully
+Aerial%;Percentage of aerials won
+Recov/90;Number of loose balls recovered per 90 minutes
+Fls/90;Fouls Commited per 90 minutes
+PSxG;Expected Goals based on how likely the goalkeeper is to save the shot
+PSxG/SoT;Post-Shot Expected Goals per Shot on Target
+PSxG+/-;Post-Shot Expected Goals minus Goals Allowed
+OG;Own Goals Scored Against Goalkeeper
+Points/90;Points per Match
+G-PK;Non Penalty Goals
+G-PK/90;Non Penalty Goals per 90 minutes

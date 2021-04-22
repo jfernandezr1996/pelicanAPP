@@ -1,0 +1,58 @@
+Original;Description
+Poss%;Possession %
+Gls;Total Goals
+Ast;Total Assists
+xG;Total xG
+xA;Total xG Assisted
+Gls/90;Goals per 90'
+G-PK/90;Non-Penalty Goals per 90'
+Ast/90;Assists per 90'
+xG/90;xG per 90'
+xA/90;xG Assisted per 90'
+GA;Total Goals Against
+GA/90;Goals Against per 90'
+xGA/90;xG Allowed per 90'
+Save%;Save %
+CS%;Clean Sheets %
+SoTA/90;Shots on Target Against per 90'
+Sh;Total Shots
+Sh/90;Shots per 90'
+SoT/90;Shots on Target per 90'
+SoT/G;Shots on Target per Goal
+SoTA/GA;Shots on Target Against per Goal Against
+PassesCompleted/90;Passes Completed per 90'
+PassesAttempted/90;Passes Attempted per 90'
+Passes%;Pass Completed %
+ShortPassesCompleted/90;Short Passes Completed per 90'
+ShortPasses%;Short Passes %
+MediumPasses%;Medium Passes %
+MediumPassesCompleted/90;Medium Passes Completed per 90'
+LongPasses%;Long Passes %
+LongPassesCompleted/90;Long Passes Completed per 90'
+TotDistPasses/90;Distance of Passes Completed per 90'
+PrgDistPasses/90;Progressive Distance of Passes Completed per 90'
+KP/90;Key Passes per 90'
+FinalThirdPasses/90;Passes to Final Third per 90'
+PPA/90;Passes to Penalty Area per 90'
+PassesProgressive/90;Progressive Passes per 90'
+CrsPA/90;Crosses to Penalty Area per 90'
+SCA/90;Shot-Creation Actions per 90'
+GCA/90;Goal-Creation Actions per 90'
+Press%;Pressure %
+Tkl/90;Tackles per 90'
+Blocks/90;Blocks per 90'
+Int/90;Interceptions per 90'
+Err/90;Errors leading to an opponent's shot per 90'
+Touches/90;Touches per 90'
+Dribbles%;Successful Dribbles %
+Aerial%;Aerial Wins %
+Recov/90;Recoveries per 90'
+Fls/90;Fouls per 90'
+PSxG;Post-Shot xG
+PSxG/SoT;Post-Shot xG / Shot on Target
+OG;Own Goals
+PSxG+/-;PSxG - Goals Against
+Points/90;Points per 90'
+G-xG;Goals - Expected Goals
+G-PK;Non Penalty Goals
+G-PK/90;Non Penalty Goals per 90 minutes

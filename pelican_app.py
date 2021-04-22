@@ -268,7 +268,7 @@ def main():
                         unsafe_allow_html=True)
                     st.subheader(title)
                     raw_html = html_tabla._repr_html_()
-                    components.html(raw_html, height=500, scrolling=True)
+                    components.html(raw_html, height=300, scrolling=True)
                 df_similar_t = df_similar_t.sort_values(
                     by='% Similarity', ascending=False)
                 teams_radar = df_similar_t['Squad'].tolist()

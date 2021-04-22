@@ -1,0 +1,1 @@
+web: sh setup.sh && streamlit run pelican_app.py

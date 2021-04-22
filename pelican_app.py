@@ -120,7 +120,7 @@ def main():
         plot_radar, df_radar, colors_radar = radarchart_pyplot(
                 df, df_competition, 
                 teams_selection, cols_selection, 
-                ranges_cols, percentile, average)
+                ranges_cols, percentile, average,(6,6))
         c1.pyplot(plot_radar)
             
         stats_html = calculate_stats(
@@ -290,7 +290,7 @@ def main():
                     ranges_metrics = ranges
                 plot_radar_similar, _, _ = radarchart_pyplot(
                     df, df_plot_similar, df_plot_similar['Squad'].tolist(), 
-                    random_metrics, ranges_metrics, False, False)
+                    random_metrics, ranges_metrics, False, False,(4,4))
                 c2.pyplot(plot_radar_similar)
                 
             else:

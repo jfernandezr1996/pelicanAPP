@@ -189,7 +189,7 @@ def main():
                     df_similar_comp.reset_index(drop=True, inplace=True)
                 
                 with st.sidebar.beta_expander("Search Options"):
-                    option_similar = st.checkbox('Auto Search') 
+                    option_similar = st.checkbox('Manual Search') 
                 
                     if not option_similar:
                         n_similars = st.slider(

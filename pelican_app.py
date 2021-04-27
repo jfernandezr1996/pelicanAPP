@@ -7,6 +7,8 @@ import seaborn as sns
 import random
 import base64
 sns.set_style("ticks")
+import warnings
+warnings.filterwarnings('ignore')
 
 np.random.seed(66)
 from functions import *
@@ -189,7 +191,7 @@ def main():
                     df_similar_comp.reset_index(drop=True, inplace=True)
                 
                 with st.sidebar.beta_expander("Search Options"):
-                    option_similar = st.checkbox('Manual Search') 
+                    option_similar = st.checkbox('Auto Search') 
                 
                     if not option_similar:
                         n_similars = st.slider(
@@ -241,34 +243,9 @@ def main():
                 c1, c2 = st.beta_columns((1,1.25))
                 with c1:
                     team_img = 'teams/'+team_similar+".png"
-                    st.markdown("""
-                                <style>
-                                .container {
-                                    display: flex;
-                                    }
-                                .logo-text {
-                                    font-weight:500;
-                                    font-family:IBM Plex Sans;
-                                    font-size:30px;
-                                    padding-top:10px;
-                                    }
-                                .logo-img {
-                                    float: right;
-                                    width: 20%;
-                                    height: 80px;
-                                    }
-                                </style>""", unsafe_allow_html=True)
-                    #st.markdown(
-                    #    f"""
-                    #    <div class="container">
-                    #    <p class="logo-text">Similarity Tool &nbsp</p>
-                    #    <img class="logo-img" src="data:image/png;base64,{base64.b64encode(open(team_img, "rb").read()).decode()}">
-                    #    </div>
-                    #    """,
-                    #    unsafe_allow_html=True)
                     st.markdown(
                         f"""
-                        <font style="Roboro" size="6" weight="bold"> Similarity Tool &nbsp</font>
+                        <font size="6" weight="bold"> Similarity Tool &nbsp</font>
                         <img width="80" src="data:image/png;base64,{base64.b64encode(open(team_img, "rb").read()).decode()}">
                         """, unsafe_allow_html=True)
                     st.subheader(title)

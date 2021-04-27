@@ -150,7 +150,7 @@ def radarchart_pyplot(
         s = title_plot, 
         x = .55, y = y_value,
         fontsize = 18 if size == (6,6) else 13, 
-        fontname = 'Roboto',
+        #fontname = 'Roboto',
         color = '#303A5D', 
         highlight_textprops=highlight_textprops,
         textalign='center',
@@ -773,10 +773,10 @@ def swarmplot_diagram(df, team, metrics, dict_metrics, league, additional_vars):
         title = title + ' <' + x + '> |'
     title = title[:-2] + '\n <' + comp + '>'
         
-    highlight_params = [{'color': c , 'fontsize': 22, 'fontfamily': 'IBM Plex Sans',
+    highlight_params = [{'color': c , 'fontsize': 22, #'fontfamily': 'IBM Plex Sans',
                          'weight': 'bold'} 
                         for c in squad_colors] + \
-        [{'color': '#303A5D', 'fontfamily': 'IBM Plex Sans',
+        [{'color': '#303A5D', #'fontfamily': 'IBM Plex Sans',
           'fontsize': 18, 'weight': 'regular'}]
         
     y_value = .88 if len(metrics) < 7 else .92
@@ -784,7 +784,7 @@ def swarmplot_diagram(df, team, metrics, dict_metrics, league, additional_vars):
         s = title, 
         x = .52, y = y_value,
         fontsize = 22, 
-        fontname = 'Roboto',
+        #fontname = 'Roboto',
         highlight_textprops = highlight_params,
         textalign='center', 
         ha = 'center', va = 'top')

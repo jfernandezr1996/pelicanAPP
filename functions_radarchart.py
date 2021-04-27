@@ -19,8 +19,9 @@ class ComplexRadar():
         for label, angle in zip(labels, angles):
             x,y = label.get_position()
             lab = axes[0].text(x,y, label.get_text(), 
-                               fontdict = {'fontsize': fontsize_labels, 
-                                           'fontfamily': 'Roboto'},
+                               fontdict = {'fontsize': fontsize_labels
+                                           #,'fontfamily': 'Roboto'
+                                           },
                                transform=label.get_transform(),
                                ha=label.get_ha(), va=label.get_va())
             if (angle <= 180):
@@ -43,8 +44,9 @@ class ComplexRadar():
             gridlabel[-1] = ""
             ax.set_rgrids(grid, labels=gridlabel, 
                           angle=angles[i], 
-                          fontsize=fontsize_text,
-                          fontfamily='Roboto')
+                          fontsize=fontsize_text
+                          #,fontfamily='Roboto'
+                          )
             ax.set_ylim(*ranges[i])
         self.angle = np.deg2rad(np.r_[angles, angles[0]])
         self.ranges = ranges

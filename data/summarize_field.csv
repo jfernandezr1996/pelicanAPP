@@ -45,6 +45,7 @@ Int/90;Interceptions per 90'
 Err/90;Errors leading to an opponent's shot per 90'
 Touches/90;Touches per 90'
 Dribbles%;Successful Dribbles %
+Dribbles/90;Dribbles Completed per 90'
 Aerial%;Aerial Wins %
 Recov/90;Recoveries per 90'
 Fls/90;Fouls per 90'

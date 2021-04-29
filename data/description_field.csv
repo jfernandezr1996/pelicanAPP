@@ -45,6 +45,7 @@ Int/90;Interceptions per 90 minutes
 Err/90;Mistakes leading to an opponent's shot
 Touches/90;Number of times a player touched a ball per 90 minutes
 Dribbles%;Percentage of Dribbles Completed Successfully
+Dribbles/90;Dribbles Completed Successfully per 90 minutes
 Aerial%;Percentage of aerials won
 Recov/90;Number of loose balls recovered per 90 minutes
 Fls/90;Fouls Commited per 90 minutes

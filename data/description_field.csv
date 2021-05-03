@@ -1,5 +1,5 @@
 Metric;Description
-Poss;Percentage of passes attemped
+Poss%;Percentage of passes attemped
 Gls;Goals scored or allowed
 Ast;Assists
 xG;Expected Goal (include penalty kicks)
